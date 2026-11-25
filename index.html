@@ -221,6 +221,7 @@ kbd{border:1px solid var(--line);border-radius:5px;padding:1px 6px;font:inherit;
   <div class="home">
     <div>
       <h1>AI systems are now defrauded, governed and judged by instruments nobody validated</h1>
+      <p class="lede">Mark Paes and Tingting (Rachel) Chung</p>
       <p class="keys">Presenting: <kbd>←</kbd> <kbd>→</kbd> step · <kbd>1</kbd>–<kbd>9</kbd> jump · <kbd>T</kbd> timer · <kbd>R</kbd> reset step · <kbd>N</kbd> speaker notes · <kbd>F</kbd> full screen</p>
     </div>
     <div><ul class="sched" id="sched"></ul></div>
@@ -1040,7 +1041,7 @@ document.addEventListener("keydown",e=>{
 });
 
 if(QR_SVG)document.querySelectorAll("[data-qr]").forEach(q=>q.innerHTML=QR_SVG);
-if(SITE_URL)document.querySelectorAll("[data-link]").forEach(p=>p.textContent=SITE_URL);
+document.querySelectorAll("[data-link]").forEach(p=>p.textContent="Mark Paes · Tingting (Rachel) Chung"+(SITE_URL?" · "+SITE_URL:""));
 oLamps();oMap();gView();gRule();gInf();sAxes();sOne();eGood();eMatrix();eSchema();eRunsDraw();fControls();fDraw(null);fViewDraw();fOpen();
 route();
 }

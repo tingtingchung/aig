@@ -1,5 +1,7 @@
 # Talk demos — ICIS 2026
 
+Mark Paes and Tingting (Rachel) Chung
+
 Interactive demos that replace slides for five talks:
 
 - Governance-Grade Benchmarks (Dec 4, 5 min)
