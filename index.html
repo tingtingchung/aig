@@ -197,6 +197,7 @@ body.shownotes .notes{display:block}
 .sched{list-style:none;margin:0;padding:0}
 .sched li{display:grid;grid-template-columns:5.4em minmax(0,1fr);gap:14px;padding:12px 0;border-top:1px solid var(--line)}
 .sched .d{font-size:24px;font-weight:300;white-space:nowrap;line-height:1.1}
+.sched .c{color:var(--ink);margin-top:2px}
 .sched .s{font-size:13px;display:inline-block;margin-top:4px;padding:2px 9px;border-radius:999px;border:1px solid var(--line);color:var(--mute)}
 .story{display:grid;gap:8px}
 .story div{padding:10px 14px;border-radius:10px;background:var(--panel);border:1px solid var(--line)}
@@ -220,13 +221,6 @@ kbd{border:1px solid var(--line);border-radius:5px;padding:1px 6px;font:inherit;
   <div class="home">
     <div>
       <h1>AI systems are now defrauded, governed and judged by instruments nobody validated</h1>
-      <div class="story">
-        <div><b>Evaluations act as standards</b> but are not governance-grade. <span class="mute">Governance-Grade Benchmarks</span></div>
-        <div><b>They assume a cooperative subject.</b> <span class="mute">From Leaderboards to Instruments</span></div>
-        <div><b>Safeguards get configured from them.</b> <span class="mute">Refuse or Permit?</span></div>
-        <div><b>Organizations govern the data around them.</b> <span class="mute">GUARD</span></div>
-        <div><b>And the agents they deploy can be the mark.</b> <span class="mute">When the Mark Is a Machine</span></div>
-      </div>
       <p class="keys">Presenting: <kbd>←</kbd> <kbd>→</kbd> step · <kbd>1</kbd>–<kbd>9</kbd> jump · <kbd>T</kbd> timer · <kbd>R</kbd> reset step · <kbd>N</kbd> speaker notes · <kbd>F</kbd> full screen</p>
     </div>
     <div><ul class="sched" id="sched"></ul></div>
@@ -699,13 +693,13 @@ const pct = v => (v*100).toFixed(0)+"%";
 
 /* ---------- home ---------- */
 const TALKS = [
-  {v:"oup", d:"Dec 4", t:"Governance-Grade Benchmarks: Mapping Blind Spots in AI Evaluation", m:"5 min"},
-  {v:"guard", d:"Dec 12", t:"Between Leverage and Leakage (GUARD)", m:"SIGDSA, morning, 10 min"},
-  {v:"scds", d:"Dec 12", t:"Refuse or Permit? Configuring AI safeguards", m:"SIGDSA, morning, 10 min"},
-  {v:"evals", d:"Dec 12", t:"From Leaderboards to Instruments", m:"WISP, afternoon, 10 min"},
-  {v:"fraud", d:"Dec 13", t:"When the Mark Is a Machine", m:"TREO Talks, afternoon, 10 min"}
+  {v:"oup", c:"Evaluations act as standards but are not governance-grade.", d:"Dec 4", t:"Governance-Grade Benchmarks: Mapping Blind Spots in AI Evaluation", m:"5 min"},
+  {v:"guard", c:"Organizations govern the data that flows into AI tools.", d:"Dec 12", t:"Between Leverage and Leakage (GUARD)", m:"SIGDSA, morning, 10 min"},
+  {v:"scds", c:"Safeguards get configured from evaluation results.", d:"Dec 12", t:"Refuse or Permit? Configuring AI safeguards", m:"SIGDSA, morning, 10 min"},
+  {v:"evals", c:"Evaluations assume a cooperative subject.", d:"Dec 12", t:"From Leaderboards to Instruments", m:"WISP, afternoon, 10 min"},
+  {v:"fraud", c:"The agents organizations deploy can be the mark.", d:"Dec 13", t:"When the Mark Is a Machine", m:"TREO Talks, afternoon, 10 min"}
 ];
-$("sched").innerHTML = TALKS.map(x=>`<li><div class="d">${esc(x.d)}</div><div><b><a href="#${x.v}">${esc(x.t)}</a></b><br><span class="s">${esc(x.m)}</span></div></li>`).join("");
+$("sched").innerHTML = TALKS.map(x=>`<li><div class="d">${esc(x.d)}</div><div><b><a href="#${x.v}">${esc(x.t)}</a></b><div class="c">${esc(x.c)}</div><span class="s">${esc(x.m)}</span></div></li>`).join("");
 $("nav").innerHTML = `<a href="#home" data-v="home">Overview</a>` + TALKS.map(x=>`<a href="#${x.v}" data-v="${x.v}">${esc($("v-"+x.v).dataset.label)}</a>`).join("");
 
 /* ---------- OUP ---------- */
