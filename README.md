@@ -2,8 +2,6 @@
 
 Mark Paes and Tingting (Rachel) Chung
 
-Interactive demos that replace slides for five talks:
-
 - Governance-Grade Benchmarks (Dec 4, 5 min)
 - Between Leverage and Leakage / GUARD (SIGDSA, Dec 12)
 - Refuse or Permit? Configuring AI safeguards (SIGDSA, Dec 12)
