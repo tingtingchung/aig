@@ -7,3 +7,4 @@ Mark Paes and Tingting (Rachel) Chung
 - Refuse or Permit? Configuring AI safeguards (SIGDSA, Dec 12)
 - From Leaderboards to Instruments (WISP, Dec 12)
 - When the Mark Is a Machine (TREO, Dec 13)
+Live site: https://tingtingchung.github.io/aig/#home
