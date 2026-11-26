@@ -1,4 +1,4 @@
-# Talk demos — ICIS 2026
+# Working Papers on AI Governance
 
 Mark Paes and Tingting (Rachel) Chung
 
